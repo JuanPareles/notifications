@@ -12,7 +12,7 @@ class Header extends React.Component { // eslint-disable-line react/prefer-state
         </a>
         <div className="nav-bar">
           <Link className="router-link" to="/">
-            Home
+            My Home
           </Link>
           <Link className="router-link" to="/features">
             Features

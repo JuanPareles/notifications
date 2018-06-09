@@ -11,7 +11,13 @@ const makeSelectUsername = () => createSelector(
   (homeState) => homeState.get('username')
 );
 
+const makeSelectNotifications = () => createSelector(
+  selectHome,
+  (homeState) => homeState.get('notifications')
+);
+
 export {
   selectHome,
   makeSelectUsername,
+  makeSelectNotifications,
 };

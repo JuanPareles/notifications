@@ -1,0 +1,31 @@
+.widget-container {
+	margin-top: 20px;
+	height: 150px;
+	display: grid;
+	grid-template-columns: 180px 1fr;
+	transition: 200ms ease-in-out;
+
+	.widget-image {
+		border-radius: 1px;
+		overflow: hidden;
+
+		img {
+			height: 150px;
+		}
+	}
+
+	.widget-body {
+		padding: 10px 30px 20px 20px;
+
+		.title {
+			text-decoration: none;
+			margin: 0px;
+			color: #555;
+		}
+	}
+
+	&:hover {
+		box-shadow: 1px 1px 5px #ccc;
+		transform: scale(1.05);
+	}
+}

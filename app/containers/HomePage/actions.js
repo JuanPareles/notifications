@@ -15,7 +15,12 @@
  *    }
  */
 
-import { CHANGE_USERNAME } from './constants';
+import { 
+  CHANGE_USERNAME,
+  LOAD_NOTIFICATIONS,
+  LOAD_NOTIFICATIONS_SUCCESS,
+  LOAD_NOTIFICATIONS_ERROR,
+} from './constants';
 
 /**
  * Changes the input field of the form
@@ -28,5 +33,47 @@ export function changeUsername(name) {
   return {
     type: CHANGE_USERNAME,
     name
+  };
+}
+
+
+
+/**
+ * Load the notifications, this action starts the request saga
+ *
+ * @return {object} An action object with a type of LOAD_REPOS
+ */
+export function loadNotifications() {
+  return {
+    type: LOAD_NOTIFICATIONS,
+  };
+}
+
+/**
+ * Dispatched when the notifications are loaded by the request saga
+ *
+ * @param  {array} notifications The notifications data
+ * @param  {string} username The current username
+ *
+ * @return {object}      An action object with a type of LOAD_NOTIFICATIONS_SUCCESS passing the notifications
+ */
+export function notificationsLoaded(notifications) {
+  return {
+    type: LOAD_NOTIFICATIONS_SUCCESS,
+    notifications,
+  };
+}
+
+/**
+ * Dispatched when loading the notifications fails
+ *
+ * @param  {object} error The error
+ *
+ * @return {object}       An action object with a type of LOAD_NOTIFICATIONS_ERROR passing the error
+ */
+export function notificationsLoadingError(error) {
+  return {
+    type: LOAD_NOTIFICATIONS_ERROR,
+    error,
   };
 }

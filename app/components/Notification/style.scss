@@ -1,0 +1,19 @@
+.notification-wrapper {
+	padding: 20px;
+	margin-bottom: 10px;
+}
+
+.thumbs-container {
+	margin-top: 20px;
+	.thumb {
+		height: 150px;
+		margin-right: 20px;
+		border-radius: 1px;
+		transition: 200ms ease-in-out;
+
+		&:hover {
+			box-shadow: 1px 1px 5px #ccc;
+			transform: scale(1.05);
+		}
+	}
+}

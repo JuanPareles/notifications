@@ -4,7 +4,9 @@
 
 import { call, put, select, takeLatest } from 'redux-saga/effects';
 import { LOAD_REPOS } from 'containers/App/constants';
+import { LOAD_NOTIFICATIONS } from './constants';
 import { reposLoaded, repoLoadingError } from 'containers/App/actions';
+import { notificationsLoaded, notificationsLoadingError } from './actions';
 
 import request from 'utils/request';
 import { makeSelectUsername } from 'containers/HomePage/selectors';
@@ -27,12 +29,38 @@ export function* getRepos() {
 }
 
 /**
+ * Github repos request/response handler
+ */
+export function* getNotifications() {
+  const requestURL = 'http://www.mocky.io/v2/5b1746e03000006d00873370';
+
+  try {
+    // Call our request helper (see 'utils/request')
+    const data = yield call(request, requestURL);
+    yield put(notificationsLoaded(data.notifications));
+  } catch (err) {
+    yield put(notificationsLoadingError(err));
+  }
+}
+
+/**
  * Root saga manages watcher lifecycle
  */
-export default function* githubData() {
+export default function* notificationsData() {
   // Watches for LOAD_REPOS actions and calls getRepos when one comes in.
   // By using `takeLatest` only the result of the latest API call is applied.
   // It returns task descriptor (just like fork) so we can continue execution
   // It will be cancelled automatically on component unmount
-  yield takeLatest(LOAD_REPOS, getRepos);
+  yield takeLatest(LOAD_NOTIFICATIONS, getNotifications);
 }
+
+/**
+ * Root saga manages watcher lifecycle
+ */
+// export default function* githubData() {
+//   // Watches for LOAD_REPOS actions and calls getRepos when one comes in.
+//   // By using `takeLatest` only the result of the latest API call is applied.
+//   // It returns task descriptor (just like fork) so we can continue execution
+//   // It will be cancelled automatically on component unmount
+//   yield takeLatest(LOAD_REPOS, getRepos);
+// }
