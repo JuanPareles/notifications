@@ -1,4 +1,4 @@
-
+-<img src="https://raw.githubusercontent.com/JuanPareles/notifications/master/app/components/images/screenshot.png" height="480" alt="screenshot" align="center" />
 
 <div align="center">A minimal Notifications React-Redux application with all the industry best practices</div>
 
