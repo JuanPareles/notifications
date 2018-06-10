@@ -1,4 +1,4 @@
--<img src="https://cdn.rawgit.com/JuanPareles/notifications/4d3dec2e9cd995e86cde23b91ef3531c7280dfcd/app/images/screenshot.png" height="480" alt="screenshot" align="center" />
+<div align="center"><img src="https://cdn.rawgit.com/JuanPareles/notifications/4d3dec2e9cd995e86cde23b91ef3531c7280dfcd/app/images/screenshot.png" height="480" alt="screenshot" align="center" /></div>
 
 <div align="center">A minimal Notifications React-Redux application with all the industry best practices</div>
 
