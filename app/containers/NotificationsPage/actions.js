@@ -15,33 +15,16 @@
  *    }
  */
 
-import { 
-  CHANGE_USERNAME,
+import {
   LOAD_NOTIFICATIONS,
   LOAD_NOTIFICATIONS_SUCCESS,
   LOAD_NOTIFICATIONS_ERROR,
 } from './constants';
 
 /**
- * Changes the input field of the form
- *
- * @param  {name} name The new text of the input field
- *
- * @return {object}    An action object with a type of CHANGE_USERNAME
- */
-export function changeUsername(name) {
-  return {
-    type: CHANGE_USERNAME,
-    name
-  };
-}
-
-
-
-/**
  * Load the notifications, this action starts the request saga
  *
- * @return {object} An action object with a type of LOAD_REPOS
+ * @return {object} An action object with a type of LOAD_NOTIFICATIONS
  */
 export function loadNotifications() {
   return {

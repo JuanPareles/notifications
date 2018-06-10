@@ -12,12 +12,9 @@ import './style.scss';
 
 export default class NotificationsPage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   /**
-   * when initial state username is not null, submit the form to load repos
+   * when initial state username is not null, submit the form to load notifications
    */
   componentDidMount() {
-    if (this.props.username && this.props.username.trim().length > 0) {
-      this.props.onSubmitForm();
-    }
     this.props.loadNotifications();
   }
 
@@ -30,15 +27,10 @@ export default class NotificationsPage extends React.PureComponent { // eslint-d
       <article>
         <Helmet>
           <title>Notifications Page</title>
-          <meta name="description" content="A React.js Boilerplate application homepage" />
+          <meta name="description" content="A React.js application NotificationsPage" />
         </Helmet>
-        <div className="home-page">
-          <section className="centered">
-            <h2>Start your next react project in seconds</h2>
-            <p>A minimal <i>React-Redux</i> boilerplate with all the best practices</p>
-          </section>
+        <div className="notifications-page">
           <section>
-            <h2>Notifications</h2>
             { (notifications || []).map((item) => <Notification key={item.entity.id} {...item} />) }
           </section>
         </div>
@@ -53,14 +45,7 @@ NotificationsPage.propTypes = {
     PropTypes.object,
     PropTypes.bool,
   ]),
-  repos: PropTypes.oneOfType([
-    PropTypes.array,
-    PropTypes.bool,
-  ]),
   notifications: PropTypes.array,
   loadNotifications: PropTypes.func,
-  onSubmitForm: PropTypes.func,
-  username: PropTypes.string,
-  onChangeUsername: PropTypes.func,
 };
 

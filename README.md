@@ -1,8 +1,6 @@
-<img src="https://raw.githubusercontent.com/flexdinesh/react-redux-boilerplate/master/app/components/Header/images/banner.jpg" alt="react redux boilerplate banner" align="center" />
 
-<br />
 
-<div align="center">A minimal, beginner friendly React-Redux boilerplate with all the industry best practices</div>
+<div align="center">A minimal Notifications React-Redux application with all the industry best practices</div>
 
 <br />
 
@@ -28,20 +26,11 @@
 <br />
 
 <div align="center">
-  <sub>Created by <a href="https://twitter.com/flexdinesh">Dinesh Pandiyan</a></sub>
+  <sub>Created by Juan Pareles using <a href="https://twitter.com/flexdinesh">Dinesh Pandiyan</a> Boilerplate</sub>
 </div>
 
 
-## Why? [![start with why](https://img.shields.io/badge/start%20with-why%3F-brightgreen.svg?style=flat)](http://www.ted.com/talks/simon_sinek_how_great_leaders_inspire_action)
-
-The whole React community knows and will unanimously agree that [react-boilerplate](https://github.com/react-boilerplate/react-boilerplate) is the ultimate starter template for kickstarting a React project. It's setup with all the industry best practices and standards. But it also has a lot more than what you just need to start a react-redux app. It took me quite some time to get my head around what was happening in the codebase and it's clearly not for starters. They quote this right in their readme,
-
-> Please note that this boilerplate is **production-ready and not meant for beginners**! If you're just starting out with react or redux, please refer to https://github.com/petehunt/react-howto instead. If you want a solid, battle-tested base to build your next product upon and have some experience with react, this is the perfect start for you.
-
-So it involves a lot of additional learning curve to get started with [react-boilerplate](https://github.com/react-boilerplate/react-boilerplate). That's why I forked it, stripped it down and made this _leaner, **beginner friendly**_ boilerplate without all the additional complexity.
-
-
-## Features
+## Features Thanks to Dinesh Pandiyan
 
 This boilerplate features all the latest tools and practices in the industry.
 
@@ -88,8 +77,8 @@ But wait... there's more!
 
 ## Quick start
 
-1. Clone this repo using `git clone https://github.com/flexdinesh/react-redux-boilerplate.git`
-2. Move to the appropriate directory: `cd react-redux-boilerplate`.<br />
+1. Clone this repo using `git clone https://github.com/JuanPareles/notifications`
+2. Move to the appropriate directory: `cd notifications`.<br />
 3. Run `yarn` or `npm install` to install dependencies.<br />
 4. Run `npm start` to see the example app at `http://localhost:3000`.
 
@@ -98,7 +87,7 @@ Now you're ready build your beautiful React Application!
 
 ## Info
 
-These are the things I stripped out from [react-boilerplate](https://github.com/react-boilerplate/react-boilerplate) - _github project rules, ngrok tunneling, shjs, service worker, webpack dll plugin, i18n, styled-components, code generators and a few more._
+These are the things Dinesh Pandiyan stripped out from [react-boilerplate](https://github.com/react-boilerplate/react-boilerplate) - _github project rules, ngrok tunneling, shjs, service worker, webpack dll plugin, i18n, styled-components, code generators and a few more._
 
 
 ## License

@@ -11,8 +11,7 @@
  */
 import { fromJS } from 'immutable';
 
-import { 
-  CHANGE_USERNAME,
+import {
   LOAD_NOTIFICATIONS,
   LOAD_NOTIFICATIONS_SUCCESS,
   LOAD_NOTIFICATIONS_ERROR,
@@ -20,7 +19,6 @@ import {
 
 // The initial state of the App
 const initialState = fromJS({
-  username: '',
   notifications: null,
   error: false,
   loading: false,
@@ -28,10 +26,6 @@ const initialState = fromJS({
 
 function homeReducer(state = initialState, action) {
   switch (action.type) {
-    case CHANGE_USERNAME:
-      // Delete prefixed '@' from the github username
-      return state.set('username', action.name.replace(/@/gi, ''));
-
     case LOAD_NOTIFICATIONS:
       return state
         .set('loading', true)
@@ -40,12 +34,11 @@ function homeReducer(state = initialState, action) {
     case LOAD_NOTIFICATIONS_SUCCESS:
       return state
         .set('notifications', action.notifications)
-        .set('loading', false)
+        .set('loading', false);
     case LOAD_NOTIFICATIONS_ERROR:
       return state
         .set('error', action.error)
         .set('loading', false);
-    
     default:
       return state;
   }
